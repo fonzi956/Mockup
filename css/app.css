@@ -1,7 +1,171 @@
-body {
-  margin: 5%;
-}
-header{
+/*******************************************************
+Starting with small devices
+*******************************************************/
 
-  margin-bottom: 2%;
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica;
+  text-align: center;
+  margin: 0;
+}
+
+.boxes {
+  width: 45px;
+  height: 45px;
+  border: 1px solid rgba(0, 0, 0, .2);
+  margin-top: -35px;
+
+}
+
+.box1 {
+  background: #02b3e4;
+}
+
+.box2 {
+  background: #2d3c49;
+}
+
+.box3 {
+  background: #7d97ad;
+}
+
+.boxes p {
+  position: absolute;
+  bottom: 80%;
+}
+
+#pic2, #pic{
+  display: none;
+}
+
+header{
+  font-family: Courier, monospace;
+}
+
+.col1{
+  padding: 60px 0;
+  display: flex;
+  justify-content:center;
+  justify-content:space-around;
+}
+
+aside {
+  padding: 60px 0;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.social-link{
+  display: flex;
+  justify-content:center;
+  justify-content:space-around;
+}
+
+
+
+.social-link img{
+  width: 50px
+}
+
+/*******************************************************
+Responsive layout when width gets larger
+*******************************************************/
+
+@media screen and (min-width: 800px) {
+  .container {
+    display:flex;
+    justify-content:center;
+    max-width: 80%;
+  }
+  .col1{
+    flex-direction:column;
+    justify-content:flex-start;
+    margin-top: 20px;
+  }
+
+  .col2{
+    flex:6;
+    margin-left: 30px;
+  }
+
+  #pic2{
+    display: initial;
+    width: 100%;
+  }
+  #pic{
+    display: initial;
+  }
+
+  .boxes {
+    width: 60px !important;
+    height: 60px !important;
+    margin-top: 35px !important;
+
+  }
+  .box1, .box2, .box3 {
+    position: relative !important;
+    left: 0% !important;
+  }
+  .boxes p {
+    position: absolute;
+    bottom: -70%;
+
+  }
+  .sideL {
+    flex-direction:column;
+  }
+
+  header {
+    padding: 20px 0;
+  }
+
+  hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+  }
+
+  header img{
+    float: left;
+  }
+  header h1, h6{
+    float: right;
+    clear: right;
+    margin: auto;
+  }
+  header h6{
+    font-size: 85%;
+  }
+
+  .social-link{
+    display: flex;
+    justify-content:center;
+    justify-content:space-between;
+  }
+
+  .visuallyhidden{
+    display: flex;
+  }
+
+  .social-link img{
+    width: 75%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .container {
+    display:flex;
+    max-width: 70%;
+  }
 }
